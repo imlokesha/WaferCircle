@@ -6,7 +6,7 @@ RUN echo "* soft nproc 4096" >> /etc/security/limits.conf \
     && echo "* hard nproc 4096" >> /etc/security/limits.conf \
     && echo "* soft nofile 4096" >> /etc/security/limits.conf \
     && echo "* hard nofile 4096" >> /etc/security/limits.conf
-RUN pip install --upgrade pip
+# RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 ENTRYPOINT [ "python" ]
 CMD [ "main.py" ]
